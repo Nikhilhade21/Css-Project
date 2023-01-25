@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+    <head>
+         <title>css web page</title>
+         <meta charset="utf-8" />
+         <meta name="viewport" content="width=device-width, intial-scale=1">
+         <style> 
+               body{
+                margin: 0;
+                padding: o;
+                line-height: 1.5em;
+               }
+               #header{
+                background-color: black;
+                font-family: Arial;
+                height: 100px;
+               }
+               #contentwrapper {
+                float: left;
+                width: 100%
+                ;
+               }
+               #contentcolumn {
+                margin: 0 230px 0 230px;
+               }
+               #leftcolumn {
+                float: left;
+                width: 230px;
+                margin-left: -100%;
+                background: #24c8ff;
+               }
+               #rightcolumn {
+                float: left;
+                width: 230px;
+                margin-left: -230px;
+                background: #fffb00;
+               }
+               .innertext {
+                margin: 20px;
+                font-family: Arial;
+                color: #5e5e5e;
+               }
+               #footer {
+                clear: left; /* Cannot Float on Left*/
+                width: 100%;
+                background: black;
+                color: #fff;
+                font-family: Arial;
+                text-align: center;
+                padding: 4px;
+               }
+               /* #### navigation Bar ###*/
+               ul{
+                list-style-type: none;
+                margin: 0%;
+                padding: 0%;
+                background-color: black;
+               }
+               li {
+                float: left;
+                border-right: 1px solid #bbb;
+
+               }
+               li:lasst-child {
+                border-right: none;
+
+               }
+               li a{
+                display: block;
+                color: #fff;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+               }
+               li a:hover:not(.active) {
+                background-color: #808080;
+               }
+               .active {
+                background-color: #0099ff;
+               }
+               /* #### responsive layout css #### */
+
+               @media (max-width: 840px){/* Drop Right column down */
+            
+               #leftcolumn{
+                margin-left: -100%;
+               }
+               #rightcolumn {
+                float: none;
+                width: 100%;
+                margin-left: 0;
+                clear: both;
+               }
+               #contentcolumn {
+                margin-right: o; /*set margin to leftcolumnwidth*/
+               }
+             }
+              @media (max-width: 600px) { /* Drop left column*/
+            
+               #leftcolumn {
+                float: none;
+                width: 100%;
+                clear: both;
+                margin-left: 0;
+               }
+               #contentcolumn {
+                margin-left: 0;
+               }
+             }
+                
+         </style>
+    </head>
+    <body>
+        <div id="container"> 
+            <div id="header">
+                <ul>
+                    <li><a class="active" href="#home">Home </a></li>
+                    <li><a href="#news">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#news">News</a></li>
+                </ul>
+            </div>
+            <div id="contentwrapper">
+                <div id="contentcolumn">
+                    <div class="innertext">
+                    WELCOME
+                     We use the len=n argument to the Word constructor to restict the parser to 
+                     accepting a specific number of characters, for example in the zip code and phone 
+                     number. Word also accepts min=n'' and ``max=n to enable you to restrict 
+                     the lengthof a word to within a range.
+                     We use Group to group the parsed results into sub­lists, for example in the 
+                     definition of city and name. Group enables us to organize the parse results into 
+                     simple parse trees.
+                     We use Combine to join parsed results back into a single string. For example, in 
+                     the phone number, we can require dashes and yet join the results back into a 
+                     single string.
+                    parses a more complex structure and produces 
+                    </div>
+                </div>
+            </div>
+            <div id="leftcolumn">
+                <div class="innertext">
+                    We use the len=n argument to the Word constructor to restict the parser to 
+                    accepting a specific number of characters, for example in the zip code and phone 
+                    number. Word also accepts min=n'' and ``max=n to enable you to restrict 
+                    the length of a word to within a range.
+                    ● We use Group to group the parsed results into sub­lists, for example in the 
+                    definition of city and name. Group enables us to organize the parse results into 
+                    simple parse trees.
+                    ● We use Combine to join parsed results back into a single string. For example, in 
+                    the phone number, we can require dashes and yet join the results back into a 
+                    single string.
+                    ● We use Suppress to remove unneeded sub­elements from parsed results. For 
+                    example, we do not need the comma between last and first name.
+                    2.6.6.4 A more complex example
+                    This example (thanks to Paul McGuire) parses a more complex structure and produces 
+                </div>
+             </div>
+             <div id="rightcolumn">
+                <div class="innertext">
+                    We use the len=n argument to the Word constructor to restict the parser to 
+                    accepting a specific number of characters, for example in the zip code and phone 
+                    number. Word also accepts min=n'' and ``max=n to enable you to restrict 
+                    the length of a word to within a range.
+                    ● We use Group to group the parsed results into sub­lists, for example in the 
+                    definition of city and name. Group enables us to organize the parse results into 
+                    simple parse trees.
+                    ● We use Combine to join parsed results back into a single string. For example, in 
+                    the phone number, we can require dashes and yet join the results back into a 
+                    single string.
+                    ● We use Suppress to remove unneeded sub­elements from parsed results. For 
+                    example, we do not need the comma between last and first name.
+                    2.6.6.4 A more complex example
+                    This example (thanks to Paul McGuire) parses a more complex structure and produces 
+                </div>
+             </div>
+            <div id="footer">footer</div>
+        </div>
+
+        
+    </body>
+</html>
